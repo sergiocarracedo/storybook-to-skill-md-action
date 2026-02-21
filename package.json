@@ -1,0 +1,30 @@
+{
+  "name": "storybook-to-skill-md-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to generate SKILL.md files from Storybook for AI agents",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "dev": "npm run build -- --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "github-action",
+    "storybook",
+    "skill-md",
+    "ai",
+    "documentation"
+  ],
+  "license": "MIT",
+  "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.3.3"
+  }
+}

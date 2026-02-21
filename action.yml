@@ -1,0 +1,65 @@
+name: 'Storybook to SKILL.md'
+description: 'Generate SKILL.md files from Storybook for AI agents'
+author: 'Sergio Carracedo <hi@sergiocarracedo.es>'
+branding:
+  icon: 'book-open'
+  color: 'purple'
+
+inputs:
+  storybook-url:
+    description: 'Storybook URL (e.g., https://your-storybook.com)'
+    required: false
+  index-file:
+    description: 'Path to local index.json file (alternative to storybook-url)'
+    required: false
+  source-dir:
+    description: 'Source directory containing components'
+    required: true
+    default: './src'
+  output-dir:
+    description: 'Output directory for SKILL.md files'
+    required: true
+    default: './skills'
+  provider:
+    description: 'LLM provider (openai, anthropic, google)'
+    required: true
+  model:
+    description: 'LLM model name'
+    required: true
+  api-key:
+    description: 'API key for the LLM provider'
+    required: true
+  include:
+    description: 'Glob patterns to include (one per line)'
+    required: false
+  exclude:
+    description: 'Glob patterns to exclude (one per line)'
+    required: false
+  concurrency:
+    description: 'Number of concurrent LLM requests'
+    required: false
+    default: '3'
+  timeout:
+    description: 'Timeout for LLM calls in milliseconds'
+    required: false
+    default: '60000'
+  force:
+    description: 'Force regeneration of all files'
+    required: false
+    default: 'false'
+  verbose:
+    description: 'Enable verbose logging'
+    required: false
+    default: 'false'
+
+outputs:
+  generated-count:
+    description: 'Number of SKILL.md files generated'
+  skipped-count:
+    description: 'Number of components skipped (unchanged)'
+  failed-count:
+    description: 'Number of components that failed'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
