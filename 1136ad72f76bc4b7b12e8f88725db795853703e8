@@ -1,0 +1,23 @@
+package.json
+  a68ad9930cd93be7 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.4",
+  "base_commit_sha": "1136ad72f76bc4b7b12e8f88725db795853703e8",
+  "prompts": {
+    "a68ad9930cd93be7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0dfebe7e-b467-4ae1-b3a2-7bf184dfaeea",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Sergio Carracedo <hi@sergiocarracedo.es>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
