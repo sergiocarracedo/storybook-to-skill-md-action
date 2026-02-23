@@ -1,0 +1,33 @@
+release-please-config.json
+  8052fac85f5b090e 1-20
+.github/workflows/release-please.yml
+  8052fac85f5b090e 1-24
+.github/workflows/automerge.yml
+  8052fac85f5b090e 1-19
+.github/workflows/build.yml
+  8052fac85f5b090e 13
+.gitignore
+  8052fac85f5b090e 3
+.release-please-manifest.json
+  8052fac85f5b090e 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.4",
+  "base_commit_sha": "dc4f3016fcf3bbf07a9a4faef9e88dd1932e8a60",
+  "prompts": {
+    "8052fac85f5b090e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d5733681-25c5-42fe-8b5b-357a51e12613",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Sergio Carracedo <hi@sergiocarracedo.es>",
+      "messages": [],
+      "total_additions": 66,
+      "total_deletions": 25,
+      "accepted_lines": 66,
+      "overriden_lines": 0
+    }
+  }
+}
