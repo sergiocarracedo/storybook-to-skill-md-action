@@ -116,31 +116,31 @@ jobs:
 
 ## Inputs
 
-| Input | Description | Required | Default |
-|-------|-------------|----------|---------|
-| `storybook-url` | Storybook URL | No* | - |
-| `index-file` | Path to local index.json | No* | - |
-| `source-dir` | Source directory | Yes | `./src` |
-| `output-dir` | Output directory | Yes | `./skills` |
-| `provider` | LLM provider (openai, anthropic, google) | Yes | - |
-| `model` | LLM model name | Yes | - |
-| `api-key` | API key for LLM provider | Yes | - |
-| `include` | Glob patterns to include (multiline) | No | - |
-| `exclude` | Glob patterns to exclude (multiline) | No | - |
-| `concurrency` | Concurrent LLM requests | No | `3` |
-| `timeout` | LLM timeout in ms | No | `60000` |
-| `force` | Force regeneration | No | `false` |
-| `verbose` | Verbose logging | No | `false` |
+| Input           | Description                              | Required | Default    |
+| --------------- | ---------------------------------------- | -------- | ---------- |
+| `storybook-url` | Storybook URL                            | No\*     | -          |
+| `index-file`    | Path to local index.json                 | No\*     | -          |
+| `source-dir`    | Source directory                         | Yes      | `./src`    |
+| `output-dir`    | Output directory                         | Yes      | `./skills` |
+| `provider`      | LLM provider (openai, anthropic, google) | Yes      | -          |
+| `model`         | LLM model name                           | Yes      | -          |
+| `api-key`       | API key for LLM provider                 | Yes      | -          |
+| `include`       | Glob patterns to include (multiline)     | No       | -          |
+| `exclude`       | Glob patterns to exclude (multiline)     | No       | -          |
+| `concurrency`   | Concurrent LLM requests                  | No       | `3`        |
+| `timeout`       | LLM timeout in ms                        | No       | `60000`    |
+| `force`         | Force regeneration                       | No       | `false`    |
+| `verbose`       | Verbose logging                          | No       | `false`    |
 
-*Either `storybook-url` or `index-file` must be provided.
+\*Either `storybook-url` or `index-file` must be provided.
 
 ## Outputs
 
-| Output | Description |
-|--------|-------------|
-| `generated-count` | Number of SKILL.md files generated |
-| `skipped-count` | Number of components skipped (unchanged) |
-| `failed-count` | Number of failures |
+| Output            | Description                              |
+| ----------------- | ---------------------------------------- |
+| `generated-count` | Number of SKILL.md files generated       |
+| `skipped-count`   | Number of components skipped (unchanged) |
+| `failed-count`    | Number of failures                       |
 
 ## LLM Provider Setup
 
@@ -185,7 +185,7 @@ Available models: `gemini-2.0-flash-exp`, `gemini-1.5-pro`, `gemini-1.5-flash`
 
 ```yaml
 permissions:
-  contents: write  # Only needed for committing generated files
+  contents: write # Only needed for committing generated files
 ```
 
 ## Troubleshooting
@@ -225,5 +225,7 @@ MIT
 
 ## Related
 
+- [Project Website](https://sergiocarracedo.github.io/storybook-to-skill-md/)
+- [CLI tool docs](https://sergiocarracedo.github.io/storybook-to-skill-md/getting-started/github-action/)
 - [storybook-to-skill-md](https://github.com/sergiocarracedo/storybook-to-skill-md) - The CLI tool
 - [SKILL.md Specification](https://agentskills.io) - Format specification
