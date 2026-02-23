@@ -16,6 +16,7 @@
     "ai",
     "documentation"
   ],
+  "packageManager": "pnpm@10.26.1",
   "license": "MIT",
   "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
   "dependencies": {
