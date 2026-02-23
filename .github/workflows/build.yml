@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -29,27 +29,3 @@ jobs:
 
       - name: Build
         run: pnpm run build
-
-      - name: Check for changes in dist/
-        id: check_changes
-        run: |
-          if git diff --quiet dist/; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Fail if dist/ is outdated (PR only)
-        if: github.event_name == 'pull_request' && steps.check_changes.outputs.changed == 'true'
-        run: |
-          echo "::error::dist/ folder is not up to date. Please run 'pnpm run build' and commit the changes."
-          exit 1
-
-      - name: Commit and push changes (main only)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.check_changes.outputs.changed == 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add dist/
-          git commit -m "chore: update dist/ folder [skip ci]"
-          git push
