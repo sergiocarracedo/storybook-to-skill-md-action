@@ -1,0 +1,23 @@
+.github/workflows/build.yml
+  a68ad9930cd93be7 12-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.4",
+  "base_commit_sha": "7792261d07659b74ce9bbbc34ad9625704a40cbc",
+  "prompts": {
+    "a68ad9930cd93be7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0dfebe7e-b467-4ae1-b3a2-7bf184dfaeea",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Sergio Carracedo <hi@sergiocarracedo.es>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
