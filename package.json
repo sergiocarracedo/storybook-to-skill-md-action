@@ -17,7 +17,7 @@
     "documentation"
   ],
   "packageManager": "pnpm@10.26.1",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
   "dependencies": {
     "@actions/core": "^1.11.1",
