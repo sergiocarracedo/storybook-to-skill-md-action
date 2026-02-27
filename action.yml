@@ -21,7 +21,7 @@ inputs:
     required: true
     default: './skills'
   provider:
-    description: 'LLM provider (openai, anthropic, google)'
+    description: 'LLM provider (openai, anthropic, google, groq)'
     required: true
   model:
     description: 'LLM model name'
